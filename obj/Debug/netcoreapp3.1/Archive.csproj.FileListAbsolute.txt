@@ -1,0 +1,10 @@
+C:\Users\Admin\Desktop\контур\OneK\bin\Debug\netcoreapp3.1\Archive.deps.json
+C:\Users\Admin\Desktop\контур\OneK\bin\Debug\netcoreapp3.1\Archive.dll
+C:\Users\Admin\Desktop\контур\OneK\bin\Debug\netcoreapp3.1\Archive.pdb
+C:\Users\Admin\Desktop\контур\OneK\obj\Debug\netcoreapp3.1\Archive.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\контур\OneK\obj\Debug\netcoreapp3.1\Archive.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\контур\OneK\obj\Debug\netcoreapp3.1\Archive.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\контур\OneK\obj\Debug\netcoreapp3.1\Archive.AssemblyInfo.cs
+C:\Users\Admin\Desktop\контур\OneK\obj\Debug\netcoreapp3.1\Archive.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\контур\OneK\obj\Debug\netcoreapp3.1\Archive.dll
+C:\Users\Admin\Desktop\контур\OneK\obj\Debug\netcoreapp3.1\Archive.pdb

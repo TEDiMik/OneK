@@ -1,0 +1,16 @@
+C:\Users\Admin\Desktop\контур\OneK\bin\Debug\net5.0\OneK.exe
+C:\Users\Admin\Desktop\контур\OneK\bin\Debug\net5.0\OneK.deps.json
+C:\Users\Admin\Desktop\контур\OneK\bin\Debug\net5.0\OneK.runtimeconfig.json
+C:\Users\Admin\Desktop\контур\OneK\bin\Debug\net5.0\OneK.runtimeconfig.dev.json
+C:\Users\Admin\Desktop\контур\OneK\bin\Debug\net5.0\OneK.dll
+C:\Users\Admin\Desktop\контур\OneK\bin\Debug\net5.0\ref\OneK.dll
+C:\Users\Admin\Desktop\контур\OneK\bin\Debug\net5.0\OneK.pdb
+C:\Users\Admin\Desktop\контур\OneK\obj\Debug\net5.0\OneK.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\контур\OneK\obj\Debug\net5.0\OneK.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\контур\OneK\obj\Debug\net5.0\OneK.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\контур\OneK\obj\Debug\net5.0\OneK.AssemblyInfo.cs
+C:\Users\Admin\Desktop\контур\OneK\obj\Debug\net5.0\OneK.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\контур\OneK\obj\Debug\net5.0\OneK.dll
+C:\Users\Admin\Desktop\контур\OneK\obj\Debug\net5.0\ref\OneK.dll
+C:\Users\Admin\Desktop\контур\OneK\obj\Debug\net5.0\OneK.pdb
+C:\Users\Admin\Desktop\контур\OneK\obj\Debug\net5.0\OneK.genruntimeconfig.cache
