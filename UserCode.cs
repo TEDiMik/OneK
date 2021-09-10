@@ -65,22 +65,27 @@ namespace ArchiveTask
                 }
             }
 
-           // Console.WriteLine(arrayDate[2]);
-
 
             DateTime date1 = new DateTime(arrayDate[0], arrayDate[1],arrayDate[2],arrayTime[0], arrayTime[1],arrayTime[2]  );
             Console.WriteLine(date1);
 
-/*
+
             if (time.Contains('+'))
             {
-                Console.WriteLine(time.Split('+')[1]);
+                Console.WriteLine(" - " + time.Split('+')[1]);
+                date1 = date1.AddHours( Convert.ToDouble(time.Split('+')[1].Replace(':',',')) * -1 );
+                Console.WriteLine(date1);
+                Console.WriteLine("  ");
+                
             }
             else
             {
-                Console.WriteLine(time.Split('-')[1]);
+                Console.WriteLine(" + " + time.Split('-')[1]);
+                date1 = date1.AddHours( Convert.ToDouble(time.Split('-')[1].Replace(':',',')) );
+                Console.WriteLine(date1);
+                Console.WriteLine("  ");
             }
-*/
+
             return "";
         }
 
@@ -89,6 +94,10 @@ namespace ArchiveTask
             if (permissionGetId)
             {
 
+                /*
+                Поняв какую дату и время нужно искать, выполнить поиск по архиву
+
+                */
 
 
 
