@@ -29,16 +29,16 @@ namespace ArchiveTask
 
                 FormatOperations restoredOperation = JsonSerializer.Deserialize<FormatOperations>(operation);
                 operationDictionary.Add(restoredOperation.OperationId, GetUtcTime(restoredOperation.Time.Split('T')[0], restoredOperation.Time.Split('T')[1]));
-                Console.WriteLine(restoredOperation.Time.Split('T')[1] + "TIMEEEE");
+                // Console.WriteLine(restoredOperation.Time.Split('T')[1] + "TIMEEEE");
 
             }
 
-           /* foreach (KeyValuePair<string, string> keyValue in operationDictionary)
-            {
-                Console.WriteLine(keyValue.Key + " : " + keyValue.Value.Split('T')[1]);
+            /* foreach (KeyValuePair<string, string> keyValue in operationDictionary)
+             {
+                 Console.WriteLine(keyValue.Key + " : " + keyValue.Value.Split('T')[1]);
 
-                GetUtcTime(keyValue.Value.Split('T')[0], keyValue.Value.Split('T')[1]);
-            }*/
+                 GetUtcTime(keyValue.Value.Split('T')[0], keyValue.Value.Split('T')[1]);
+             }*/
 
         }
 
@@ -100,11 +100,16 @@ namespace ArchiveTask
                 /*
                 Поняв какую дату и время нужно искать, выполнить поиск по архиву
 
+
                 */
                 foreach (KeyValuePair<string, string> keyValue in operationDictionary)
                 {
-                    Console.WriteLine(keyValue.Key);
-                    Console.WriteLine(keyValue.Value);
+
+                    //Console.WriteLine(keyValue.Value);
+                    if (keyValue.Value == GetUtcTime(time.Split('T')[0], time.Split('T')[1]))
+                    {
+                        Console.WriteLine(keyValue.Key);
+                    }
                 }
 
 
