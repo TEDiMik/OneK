@@ -13,14 +13,14 @@ namespace ArchiveTask
     public class Archive
     {
         private bool permissionGetId = true;
-
+        Dictionary<string, string> operationDictionary;
 
         public Archive(string[] serializedOperations)
         {
             if (serializedOperations.Length == 0) { permissionGetId = false; return; }
 
             //Создать некий пустой словарь Dictinary куда впоследсвтии впишем пары ключ значения ID:TIME
-            Dictionary<string, string> operationDictionary = new Dictionary<string, string>(serializedOperations.Length);
+            operationDictionary = new Dictionary<string, string>(serializedOperations.Length);
 
 
 
@@ -28,17 +28,17 @@ namespace ArchiveTask
             {
 
                 FormatOperations restoredOperation = JsonSerializer.Deserialize<FormatOperations>(operation);
-                operationDictionary.Add(restoredOperation.OperationId, restoredOperation.Time);
-                Console.WriteLine(restoredOperation.Time);
+                operationDictionary.Add(restoredOperation.OperationId, GetUtcTime(restoredOperation.Time.Split('T')[0], restoredOperation.Time.Split('T')[1]));
+                Console.WriteLine(restoredOperation.Time.Split('T')[1] + "TIMEEEE");
 
             }
 
-            foreach (KeyValuePair<string, string> keyValue in operationDictionary)
+           /* foreach (KeyValuePair<string, string> keyValue in operationDictionary)
             {
                 Console.WriteLine(keyValue.Key + " : " + keyValue.Value.Split('T')[1]);
 
                 GetUtcTime(keyValue.Value.Split('T')[0], keyValue.Value.Split('T')[1]);
-            }
+            }*/
 
         }
 
@@ -66,27 +66,30 @@ namespace ArchiveTask
             }
 
 
-            DateTime date1 = new DateTime(arrayDate[0], arrayDate[1],arrayDate[2],arrayTime[0], arrayTime[1],arrayTime[2]  );
-            Console.WriteLine(date1);
+            DateTime date1 = new DateTime(arrayDate[0], arrayDate[1], arrayDate[2], arrayTime[0], arrayTime[1], arrayTime[2]);
+            //Console.WriteLine(date1);
 
 
             if (time.Contains('+'))
             {
-                Console.WriteLine(" - " + time.Split('+')[1]);
-                date1 = date1.AddHours( Convert.ToDouble(time.Split('+')[1].Replace(':',',')) * -1 );
-                Console.WriteLine(date1);
-                Console.WriteLine("  ");
-                
+                //  Console.WriteLine(" - " + time.Split('+')[1]);
+                date1 = date1.AddHours(Convert.ToDouble(time.Split('+')[1].Replace(':', ',')) * -1);
+                /* Console.WriteLine(date1.ToString());
+                 Console.WriteLine("  ");*/
+                return date1.ToString();
+
             }
             else
             {
-                Console.WriteLine(" + " + time.Split('-')[1]);
-                date1 = date1.AddHours( Convert.ToDouble(time.Split('-')[1].Replace(':',',')) );
-                Console.WriteLine(date1);
-                Console.WriteLine("  ");
+                // Console.WriteLine(" + " + time.Split('-')[1]);
+                date1 = date1.AddHours(Convert.ToDouble(time.Split('-')[1].Replace(':', ',')));
+                /* Console.WriteLine(date1.ToString());
+                 Console.WriteLine("  ");*/
+                return date1.ToString();
             }
 
-            return "";
+
+            return "---";
         }
 
         public Guid[] GetOperationIds(string time)
@@ -98,7 +101,11 @@ namespace ArchiveTask
                 Поняв какую дату и время нужно искать, выполнить поиск по архиву
 
                 */
-
+                foreach (KeyValuePair<string, string> keyValue in operationDictionary)
+                {
+                    Console.WriteLine(keyValue.Key);
+                    Console.WriteLine(keyValue.Value);
+                }
 
 
 
